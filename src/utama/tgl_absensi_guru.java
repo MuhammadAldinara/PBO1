@@ -1,3 +1,5 @@
+package utama;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -7,20 +9,26 @@
  *
  * @author aldinara
  */
-public class tbl_absensi_siswa {
-    private int nisn;
-    private String keterangan, tanggal;
+public class tgl_absensi_guru {
+    private int nip;
+    private String jabatan, keterangan, tanggal;
+
+    public tgl_absensi_guru(){}
     
-    public tbl_absensi_siswa(){
-        
+    public void setNip(int nip){
+        this.nip = nip;
     }
     
-    public void setNisn(int nisn){
-        this.nisn = nisn;
+    public int getNip(){
+        return this.nip;
     }
     
-    public int getNisn(){
-        return this.nisn;
+    public void setJabatan(String jabatan){
+        this.jabatan = jabatan;
+    }
+    
+    public String getJabatan(){
+        return this.jabatan;
     }
     
     public void setKeterangan(String keterangan){
@@ -39,3 +47,4 @@ public class tbl_absensi_siswa {
         return this.tanggal;
     }
 }
+
