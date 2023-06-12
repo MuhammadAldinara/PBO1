@@ -10,28 +10,23 @@ package utama;
  * @author aldinara
  */
 public class tbl_siswa {
-    private int no, tahunAjaran, kelas, nisn, tglLahir;
-    private String nama, tempatLahir, namaIbuKandung, jenisKelamin;
+    private int npm, kelas;
+    private String nama, jenisKelamin, alamat;
+    
+    
+    // npm, kelas
+    // nama, jenis kelamin, alamat
+    
     
     public tbl_siswa(){}
     
-    public void setNo(int no){
-        this.no = no;
+    public void setNpm(int npm){
+        this.npm = npm;
     }
     
-    public int getNo(){
-        return this.no;
+    public int getNpm(){
+        return this.npm;
     }
-    
-    
-    public void setTahunAjaran(int tahunAjaran){
-        this.tahunAjaran = tahunAjaran;
-    }
-    
-    public int getTahunAjaran(){
-        return this.tahunAjaran;
-    }
-    
     
     public void setKelas(int kelas){
         this.kelas = kelas;
@@ -40,25 +35,6 @@ public class tbl_siswa {
     public int getKelas(){
         return this.kelas;
     }
-   
-    
-    public void setNisn(int nisn){
-        this.nisn = nisn;
-    }
-    
-    public int getNisn(){
-        return this.nisn;
-    }
-    
-
-    public void setTglLahir(int tglLahir){
-        this.tglLahir = tglLahir;
-    }
-    
-    public int getTglLahir(){
-        return this.tglLahir;
-    }
-   
     
     public void setNama(String nama){
         this.nama = nama;
@@ -68,28 +44,19 @@ public class tbl_siswa {
         return this.nama;
     }
     
-    public void setTempatLahir(String tempatLahir){
-        this.tempatLahir = tempatLahir;
-    }
-    
-    public String getTempatLahir(){
-        return this.tempatLahir;
-    }
-    
-    
-    public void setNamaIbuKandung(String namaIbuKandung){
-        this.namaIbuKandung = namaIbuKandung;
-    }
-    
-    public String getNamaIbuKandung(){
-        return this.namaIbuKandung;
-    }
-    
     public void setJenisKelamin(String jenisKelamin){
         this.jenisKelamin = jenisKelamin;
     }
     
     public String getJenisKelamin(){
         return this.jenisKelamin;
+    }
+    
+    public void setAlamat(String alamat){
+        this.alamat = alamat;
+    }
+    
+    public String getAlamat(){
+        return this.alamat;
     }
 }
