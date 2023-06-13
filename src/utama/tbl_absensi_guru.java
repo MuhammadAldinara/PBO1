@@ -9,27 +9,10 @@ package utama;
  *
  * @author aldinara
  */
-public class tgl_absensi_guru {
-    private int nip;
-    private String jabatan, keterangan, tanggal;
+public class tbl_absensi_guru {
+    private String keterangan, tanggal;
 
-    public tgl_absensi_guru(){}
-    
-    public void setNip(int nip){
-        this.nip = nip;
-    }
-    
-    public int getNip(){
-        return this.nip;
-    }
-    
-    public void setJabatan(String jabatan){
-        this.jabatan = jabatan;
-    }
-    
-    public String getJabatan(){
-        return this.jabatan;
-    }
+    public tbl_absensi_guru(){}
     
     public void setKeterangan(String keterangan){
         this.keterangan = keterangan;

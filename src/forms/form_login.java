@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
+//import utama.Login;
+
 import utama.Login;
 import javax.swing.JOptionPane;
 
@@ -12,6 +14,8 @@ import javax.swing.JOptionPane;
  */
 public class form_login extends javax.swing.JFrame {
     Login cekLogin;
+    
+    
     /**
      * Creates new form form_login
      */
@@ -19,8 +23,9 @@ public class form_login extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         cekLogin = new Login();
-    }
+//        LHide.setVisible(false);
 
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,23 +39,26 @@ public class form_login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         btnMasuk = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
+        LShow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 186, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMinimumSize(new java.awt.Dimension(430, 330));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("LOGIN ABSENSI ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 35, -1, -1));
 
         jLabel2.setText("Masukkan Username :");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 93, -1, -1));
 
         jLabel3.setText("Masukkan Password :");
-
-        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPasswordKeyReleased(evt);
-            }
-        });
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 135, -1, -1));
+        getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 90, 173, -1));
 
         btnMasuk.setText("Login");
         btnMasuk.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +66,7 @@ public class form_login extends javax.swing.JFrame {
                 btnMasukActionPerformed(evt);
             }
         });
+        getContentPane().add(btnMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 196, 80, -1));
 
         jButton1.setText("Exit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,50 +74,16 @@ public class form_login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 196, 80, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 132, 173, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                                .addComponent(txtPassword))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(btnMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1)
-                .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMasuk)
-                    .addComponent(jButton1))
-                .addContainerGap(82, Short.MAX_VALUE))
-        );
+        LShow.setText("Show");
+        LShow.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LShowMouseClicked(evt);
+            }
+        });
+        getContentPane().add(LShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,14 +98,23 @@ public class form_login extends javax.swing.JFrame {
         
         if (cekLogin.getUsername().equals("siswa") && cekLogin.getPassword().equals("siswa123")) {
             JOptionPane.showMessageDialog(this, Berhasil);
+            txtUsername.setText("");
+            txtPassword.setText("");
             new form_siswa().setVisible(true);
+            
+            
             
             
         }else if (cekLogin.getUsername().equals("guru") && cekLogin.getPassword().equals("guru123")) {
             JOptionPane.showMessageDialog(this, Berhasil);
+            txtUsername.setText("");
+            txtPassword.setText("");
+            new form_guru().setVisible(true);
             
         } else{
             JOptionPane.showMessageDialog(this,gagal);
+            txtUsername.setText("");
+            txtPassword.setText("");
         }
         
         
@@ -142,9 +126,18 @@ public class form_login extends javax.swing.JFrame {
          System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void txtPasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyReleased
+    private void LShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LShowMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordKeyReleased
+        // Show
+        if (LShow.getText().equals("Show")) {
+            txtPassword.setEchoChar((char)0);
+            LShow.setText("Hide");
+        } else {
+            txtPassword.setEchoChar('*');
+            LShow.setText("Show");
+        }
+//        LHide.setVisible(True);
+    }//GEN-LAST:event_LShowMouseClicked
 
     /**
      * @param args the command line arguments
@@ -177,17 +170,19 @@ public class form_login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new form_login().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LShow;
     private javax.swing.JButton btnMasuk;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 

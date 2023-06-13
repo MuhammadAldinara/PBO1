@@ -9,20 +9,11 @@ package utama;
  *
  * @author aldinara
  */
-public class tbl_absensi_siswa {
-    private int nisn;
+public class tbl_absensi_siswa extends tbl_siswa{
     private String keterangan, tanggal;
     
     public tbl_absensi_siswa(){
         
-    }
-    
-    public void setNisn(int nisn){
-        this.nisn = nisn;
-    }
-    
-    public int getNisn(){
-        return this.nisn;
     }
     
     public void setKeterangan(String keterangan){
@@ -40,4 +31,5 @@ public class tbl_absensi_siswa {
     public String getTanggal(){
         return this.tanggal;
     }
+   
 }

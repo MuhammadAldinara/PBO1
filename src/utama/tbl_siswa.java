@@ -10,22 +10,22 @@ package utama;
  * @author aldinara
  */
 public class tbl_siswa {
-    private int npm, kelas;
+    private int nisn, kelas;
     private String nama, jenisKelamin, alamat;
     
     
-    // npm, kelas
+    // nisn, kelas
     // nama, jenis kelamin, alamat
     
     
     public tbl_siswa(){}
     
-    public void setNpm(int npm){
-        this.npm = npm;
+    public void setNisn(int nisn){
+        this.nisn = nisn;
     }
     
-    public int getNpm(){
-        return this.npm;
+    public int getNisn(){
+        return this.nisn;
     }
     
     public void setKelas(int kelas){

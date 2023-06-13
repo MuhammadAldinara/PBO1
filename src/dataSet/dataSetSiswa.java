@@ -10,8 +10,8 @@ import java.util.ArrayList;
  *
  * @author aldinara
  */
-public class dataSetSiswa {
-    private ArrayList<Integer> npm;
+public class dataSetSiswa{
+    private ArrayList<Integer> nisn;
     private ArrayList<Integer> kelas;
     private ArrayList<String> nama;
     private ArrayList<String> jenisKelamin;
@@ -21,19 +21,19 @@ public class dataSetSiswa {
     // nama, jenis kelamin, alamat
     
     public dataSetSiswa(){
-        npm = new ArrayList<>();
+        nisn = new ArrayList<>();
         kelas = new ArrayList<>();
         nama = new ArrayList<>();
         jenisKelamin = new ArrayList<>();
         alamat = new ArrayList<>();
     }
     
-    public void addNpm(int value){
-        npm.add(value);
+    public void addNisn(int value){
+        nisn.add(value);
     }
     
-    public ArrayList<Integer> getDataNpm(){
-        return this.npm;
+    public ArrayList<Integer> getDataNisn(){
+        return this.nisn;
     }
     
     public void addKelas(int value){
@@ -70,11 +70,11 @@ public class dataSetSiswa {
     
     
     
-    public void tambahSiswa(int kelas, String jenisKelamin, 
-            String alamat){
-        
-        addKelas (kelas);
-        addJenisKelamin(jenisKelamin);
-        addAlamat(alamat);
-    }
+//    public void tambahSiswa(int kelas, String jenisKelamin, 
+//            String alamat){
+//        
+//        addKelas (kelas);
+//        addJenisKelamin(jenisKelamin);
+//        addAlamat(alamat);
+//    }
 }

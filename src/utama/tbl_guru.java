@@ -10,18 +10,11 @@ package utama;
  * @author aldinara
  */
 public class tbl_guru {
-    private int no, nip;
-    private String nama, jabatan, tgl_lahir, tempat_lahir, jk, agama;
+    private int  nip;
+    private String nama, jabatan, jk, agama, alamat;
     
     public tbl_guru(){}
     
-    public void setNo(int no){
-        this.no = no;
-    }
-    
-    public int getNo(){
-        return this.no;
-    }
     
     public void setNip(int nip){
         this.nip = nip;
@@ -47,22 +40,6 @@ public class tbl_guru {
         return this.jabatan;
     }
     
-    public void setTgl_lahir(String tgl_lahir){
-        this.tgl_lahir = tgl_lahir;
-    }
-    
-    public String getTgl_lahir(){
-        return this.tgl_lahir;
-    }
-    
-    public void setTempat_lahir(String tempat_lahir){
-        this.tempat_lahir = tempat_lahir;
-    }
-    
-    public String getTempat_lahir(){
-        return this.tempat_lahir;
-    }
-    
     public void setJK(String jk){
         this.jk = jk;
     }
@@ -77,6 +54,14 @@ public class tbl_guru {
     
     public String getAgama(){
         return this.agama;
+    }
+    
+    public void setAlamat(String alamat){
+        this.alamat = alamat;
+    }
+    
+    public String getAlamat(){
+        return this.alamat;
     }
     
     
