@@ -21,6 +21,19 @@ public class form_guru extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         guru = new dataSetAbsensiGuru();
+        
+        
+        //
+        
+        guru.addNip(0);
+        guru.addNama("");
+        guru.addJabatan("");
+        guru.addJk("");
+        guru.addAgama("");
+        guru.addAlamat("");
+        
+        guru.addKeterangan("");
+        guru.addTanggal("");
     }
 
     /**
@@ -93,7 +106,7 @@ public class form_guru extends javax.swing.JFrame {
 
         jLabel3.setText("Nama");
 
-        txtIndex.setText("0");
+        txtIndex.setText("1");
 
         jLabel9.setText("Agama");
 
@@ -251,8 +264,19 @@ public class form_guru extends javax.swing.JFrame {
         guru.addKeterangan(cmbKet.getSelectedItem().toString());
         guru.addTanggal(txtTgl.getText());
 
-        String simpan = "Data Berhasil Disimpan";
+        String simpan = "Absen Berhasil Disimpan";
         JOptionPane.showMessageDialog(this, simpan);
+        
+        //
+        
+        txtNip.setText("");
+        txtNama.setText("");
+        txtJabatan.setText("");
+        cmbJk.getSelectedItem();
+        txtAgama.setText("");
+        txtAlamat.setText("");
+        cmbKet.getSelectedItem();
+        txtTgl.setText("");
 
         txtPane.setText("Nama : " + guru.getDataNama());
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -261,10 +285,10 @@ public class form_guru extends javax.swing.JFrame {
         // TODO add your handling code here:
         int i = Integer.valueOf( txtIndex.getText());
 
-        String pesan = "Nip " + guru.getDataNip().get(i) +
-        "\nNama " + guru.getDataNama().get(i) +
-        "\nKeterangan " + guru.getDataKeterangan().get(i) +
-        "\nTanggal " + guru.getDataTanggal().get(i) ;
+        String pesan = "Nip : " + guru.getDataNip().get(i) +
+                        "\nNama : " + guru.getDataNama().get(i) +
+                        "\nKeterangan : " + guru.getDataKeterangan().get(i) +
+                        "\nTanggal : " + guru.getDataTanggal().get(i) ;
         
         String gagal = "Gagal Lihat Absen \nTolong Masukan No Yang Benar!";
         
@@ -286,12 +310,12 @@ public class form_guru extends javax.swing.JFrame {
 
        int i = Integer.valueOf( txtIndex.getText());
 
-        String pesan = "Nip " + guru.getDataNip().get(i) +
-                       "\nNama " + guru.getDataNama().get(i) +
-                       "\nKelas " + guru.getDataJabatan().get(i) +
-                       "\nJenis Kelamin " + guru.getDataJk().get(i) +
-                       "\nAgama " + guru.getDataAgama().get(i) +
-                       "\nAlamat " + guru.getDataAlamat().get(i) ;
+        String pesan = "Nip : " + guru.getDataNip().get(i) +
+                       "\nNama : " + guru.getDataNama().get(i) +
+                       "\nJabatan : " + guru.getDataJabatan().get(i) +
+                       "\nJenis Kelamin : " + guru.getDataJk().get(i) +
+                       "\nAgama : " + guru.getDataAgama().get(i) +
+                       "\nAlamat : " + guru.getDataAlamat().get(i) ;
         
         String gagal = "Gagal Lihat Absen \nTolong Masukan No Yang Benar!";
         

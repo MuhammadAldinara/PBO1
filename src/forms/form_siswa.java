@@ -23,7 +23,7 @@ public class form_siswa extends javax.swing.JFrame {
         
         siswa.addNisn(0);
         siswa.addNama("");
-        siswa.addKelas(0);
+        siswa.addKelas("");
         siswa.addJenisKelamin("");
         siswa.addAlamat("");
         
@@ -236,7 +236,7 @@ public class form_siswa extends javax.swing.JFrame {
         
         siswa.addNisn(Integer.valueOf(txtNisn.getText()));
         siswa.addNama(txtNama.getText());
-        siswa.addKelas(Integer.valueOf(txtKelas.getText()));
+        siswa.addKelas(txtKelas.getText());
         siswa.addJenisKelamin(cmbJk.getSelectedItem().toString());
         siswa.addAlamat(txtAlamat.getText());
         
@@ -245,6 +245,14 @@ public class form_siswa extends javax.swing.JFrame {
         
         String simpan = "Absen Berhasil Disimpan";
         JOptionPane.showMessageDialog(this, simpan);
+        
+        txtNisn.setText("");
+        txtNama.setText("");
+        txtKelas.setText("");
+        cmbJk.getSelectedItem();
+        txtAlamat.setText("");
+        cmbKet.getSelectedItem();
+        txtTgl.setText("");
         
         txtPane.setText("Nama : " + siswa.getDataNama());
         
@@ -257,14 +265,14 @@ public class form_siswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         int i = Integer.valueOf( txtIndex.getText());
         
-        String pesan = "Nisn " + siswa.getDataNisn().get(i) +
-                       "\nNama " + siswa.getDataNama().get(i) +
+        String pesan = "Nisn : " + siswa.getDataNisn().get(i) +
+                       "\nNama : " + siswa.getDataNama().get(i) +
 //                        "\nKelas " + siswa.getDataNama().get(i) +
 //                        "\nJenis Kelamin " + siswa.getDataJenisKelamin().get(i) +
 //                        "\nAlamat " + siswa.getDataAlamat().get(i);
                        
-                       "\nKeterangan " + siswa.getDataKeterangan().get(i) +
-                       "\nTanggal " + siswa.getDataTanggal().get(i) ;
+                       "\nKeterangan : " + siswa.getDataKeterangan().get(i) +
+                       "\nTanggal : " + siswa.getDataTanggal().get(i);
         String gagal = "Gagal Lihat Absen \nTolong Masukan No Yang Benar!";
         
         if (txtIndex.getText().equals("0")) {

@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class dataSetSiswa{
     private ArrayList<Integer> nisn;
-    private ArrayList<Integer> kelas;
+    private ArrayList<String> kelas;
     private ArrayList<String> nama;
     private ArrayList<String> jenisKelamin;
     private ArrayList<String> alamat;
@@ -36,11 +36,11 @@ public class dataSetSiswa{
         return this.nisn;
     }
     
-    public void addKelas(int value){
+    public void addKelas(String value){
         kelas.add(value);
     }
     
-    public ArrayList<Integer> getDataKelas(){
+    public ArrayList<String> getDataKelas(){
         return this.kelas;
     }
     
